@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chúc mừng ngày Phụ nữ!</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<style>
+    #loveLetter {
+        white-space: pre-line; /* Duy trì các dòng xuống dòng trong nội dung */
+    }
+</style>
+<body>
+    <video autoplay muted loop id="backgroundVideo">
+        <source src="hi2.mp4" type="video/mp4">
+        Trình duyệt của bạn không hỗ trợ thẻ video.
+    </video>
+    <div class="container">
+        <canvas id="hearts"></canvas>
+        <div class="heart"></div>
+        <div class="heart-container">
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <!-- Thêm nhiều phần tử heart ở đây nếu cần -->
+        </div>
+        <div id="letter" class="content-container">
+            <div id="loveLetter" class="hidden">
+          Gửi mẹ,      
+                Trong tiếng yêu thương, con muốn nói,
+                Ngày 8/3 này, trọn đời con dâng mẹ.
+                Bao nụ cười ấm sưởi lòng mẹ dạt dào,
+                Hạnh phúc mênh mông, từng khoảnh khắc qua.
+                
+                Mẹ như ánh dương soi sáng con đường,
+                Sưởi ấm tâm hồn, khơi dậy niềm vui thường.
+                Trái tim con ngợi ca, với mẹ yêu thương,
+                Dâng lên mẹ, tấm lòng sâu lắng bao dung.
+                
+                Trong những dòng thơ, con gửi trao mẹ,
+                Lời yêu thương chân thành, mãi mãi bên mẹ.
+                Hôm nay con xin dâng lên mẹ yêu dấu,
+                Chúc mừng ngày Phụ nữ, tình mẹ trao đắm say.
+                                         
+            </div>
+            <div id="hiThereText" class="hidden">Hé lu mẹ, mẹ có 1 bức thư chưa đọc nhé !</div>
+            <img id="letterImage" src="heart_letter.png" alt="Heart Letter">
+            <button id="openLetterButton" class="hidden">Mở lá thư</button>
+            <div id="message" class="hidden">
+                <!-- Nội dung chào mừng sẽ được hiển thị ở đây -->
+            </div>
+            <div id="goodbyeMessage" class="hidden">
+                <h1></h1>
+            </div>  
+            <div id="container">
+                <!-- Hình ảnh của Bình -->
+                <img id="binhImage" src="binh.jpg" alt="Bình" width="200">
+                
+                <!-- Nội dung bức thư -->
+                
+            </div>         
+        </div>
+        <div id="heartOverlay"></div>
+        <div id="loveLetterContainer" class="hidden">
+            <div id="loveLetter"></div>
+        </div>
+        
+    </div>
+    <audio id="backgroundMusic" src="music.mp3" loop></audio>
+    <audio id="loveSound" src="music.mp3"></audio>
+    <script src="script.js"></script>
+</body>
+</html>

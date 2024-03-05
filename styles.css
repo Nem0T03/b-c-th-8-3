@@ -1,0 +1,215 @@
+/* Reset CSS */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Video background */
+#backgroundVideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+/* Heart animation */
+.heart {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    background-image: url('heart.png');
+    background-size: cover;
+    animation: fly-heart 10s linear infinite;
+    z-index: 9999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes fly-heart {
+    0% {
+        top: 50%;
+        left: 50%;
+    }
+    25% {
+        top: 40%;
+        left: 30%;
+    }
+    50% {
+        top: 20%;
+        left: 50%;
+    }
+    75% {
+        top: 40%;
+        left: 70%;
+    }
+    100% {
+        top: 50%;
+        left: 50%;
+    }
+}
+
+/* "Hi there" text and "Open Letter" button */
+#hiThereText, #openLetterButton {
+    position: absolute;
+    top: calc(50% - 2cm);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    animation: fade-in 1s forwards;
+    white-space: nowrap;
+}
+
+/* Heart letter and Open Letter button */
+#letterImage {
+    position: absolute;
+    top: calc(50% + 4cm);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    animation: fade-in 1s forwards 10s;
+}
+
+#openLetterButton {
+    position: absolute;
+    top: calc(50% + 7cm);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    background-color: #e2264d;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    animation: fade-in 1s forwards 10s;
+}
+
+/* Thank you text */
+#thankYouText {
+    position: absolute;
+    top: calc(50% + 6cm);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+    opacity: 0;
+    animation: fade-in 1s forwards 24s;
+}
+
+/* Fade in animation */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Hide "Hi there" text and "Open Letter" button initially */
+#hiThereText.hidden,
+#openLetterButton.hidden {
+    display: none;
+}
+/* Thêm chữ "Mở bức thư" vào CSS và ẩn nó ban đầu */
+/* Mở bức thư button */
+#openLetterButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    opacity: 0; /* Ẩn nút ban đầu */
+}
+
+#openLetterButton.visible {
+    opacity: 1; /* Hiện nút khi được kích hoạt */
+}
+/* Heart letter and Open Letter button */
+#letterImage {
+    position: absolute;
+    top: calc(50% + 4cm); /* Giữ nguyên vị trí hiện tại */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    animation: fade-in 1s forwards 10s;
+}
+
+#openLetterButton {
+    position: absolute;
+    top: calc(50% + 8cm); /* Đặt nút 1cm dưới hình ảnh */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    background-color: #e2264d;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    animation: fade-in 1s forwards 10s;
+}
+/* Style cho hình ảnh Bình */
+#binhImage {
+    position: fixed;
+    top: 50%;
+    left: 20px; /* Điều chỉnh khoảng cách từ lề trái */
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    display: none; /* Ẩn hình ảnh ban đầu */
+}
+
+/* Style cho nội dung bức thư */
+#loveLetter {
+    position: fixed;
+    top: 50%;
+    right: 20px; /* Điều chỉnh khoảng cách từ lề phải */
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    font-size: 24px; /* Điều chỉnh kích cỡ font chữ */
+    text-align: right; /* Căn phải */
+    white-space: nowrap; /* Ngăn chặn xuống dòng */
+    overflow: hidden; /* Ẩn phần vượt quá khung */
+    display: none; /* Ẩn nội dung ban đầu */
+}
+#binhImage {
+    transform: scale(2);
+    margin-left: 7cm;
+    margin-bottom: 2cm;
+    margin-top: -3cm;
+}
+
+#loveLetter {
+    margin-top: -4cm; /* Cách phía trên là -4cm */
+    width: 70%; /* Độ rộng của phần tử */
+    word-wrap: break-word; /* Tự động xuống dòng khi độ dài của từ vượt quá phạm vi của phần tử */
+    text-align: left; /* Căn lề văn bản về bên trái */
+    direction: ltr; /* Hướng văn bản từ trái sang phải */
+    transform: scale(1);
+    margin-left: -9cm;
+    margin-bottom: -3cm;
+    margin-top: -6cm;
+}
+
+#message {
+    padding-right: 2cm; /* Tạo khoảng cách 2cm giữa hình ảnh và nội dung */
+    word-wrap: break-word; /* Đảm bảo nội dung xuống dòng khi gần với khung bên phải */
+}
+
+#loveLetter {
+    max-width: 600px; /* Đặt độ rộng tối đa cho phần tử chứa bức thư */
+    overflow-wrap: break-word; /* Tự động xuống dòng khi cần thiết */
+}
